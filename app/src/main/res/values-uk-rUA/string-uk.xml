@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Task1</string>
+    <string name="Name">Dart Murzikus</string>
+    <string name="settings">Налаштування</string>
+    <string name="job">Графічний дизайнер</string>
+    <string name="home_address">Домашня адреса</string>
+    <string name="view_my_contacts">Мої контакти</string>
+    <string name="edit_profile">Редагувати профіль</string>
+    <string name="userPhoto">фотоКористувача</string>
+    <string name="fill_out_profile">Перейдіть в налаштування і заповніть Ваш профіль</string>
+    <string name="get_acquainted">Давайте познайомимся</string>
+    <string name="fill_text_invite">Заповніть профіль і перейдіть до застосунку!</string>
+    <string name="e_mail">Електронна адреса</string>
+    <string name="password">Пароль</string>
+    <string name="remember_me">Запам\'ятати мене</string>
+    <string name="google">google</string>
+    <string name="or">або</string>
+    <string name="register">Реєстрація</string>
+    <string name="agree">При реєстрації ви погоджуєтесь з нашими умовами</string>
+    <string name="agree_cont">і положеннями</string>
+    <string name="already_have_an_account">Вже маєте акаунт?</string>
+    <string name="sign_in">Увійти</string>
+</resources>
