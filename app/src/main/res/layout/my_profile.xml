@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/cl_upperBlock"
+        android:id="@+id/clUpperBlock"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -18,7 +18,7 @@
         app:layout_constraintHeight_percent="0.5">
 
         <TextView
-            android:id="@+id/tv_setting"
+            android:id="@+id/tvSetting"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toTopOf="parent"
@@ -32,11 +32,11 @@
             />
 
         <TextView
-            android:id="@+id/tv_name"
+            android:id="@+id/tvName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/ib_picture"
-            app:layout_constraintBottom_toBottomOf="@id/tv_career"
+            app:layout_constraintTop_toBottomOf="@id/ibPicture"
+            app:layout_constraintBottom_toBottomOf="@id/tvCareer"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="@dimen/smallPadding"
@@ -47,13 +47,13 @@
             />
 
         <TextView
-            android:id="@+id/tv_career"
+            android:id="@+id/tvCareer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/tv_name"
+            app:layout_constraintTop_toBottomOf="@id/tvName"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/tv_address"
+            app:layout_constraintBottom_toTopOf="@id/tvAddress"
             android:layout_marginTop="8dp"
             android:text="@string/job"
             android:textColor="@color/text_color"
@@ -62,10 +62,10 @@
             />
 
         <TextView
-            android:id="@+id/tv_address"
+            android:id="@+id/tvAddress"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/tv_name"
+            app:layout_constraintTop_toBottomOf="@id/tvName"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -77,12 +77,12 @@
             />
 
         <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/ib_picture"
+            android:id="@+id/ibPicture"
             android:layout_width="113dp"
             android:layout_height="113dp"
             android:scaleType="centerCrop"
             android:src="@drawable/babyyoda"
-            app:layout_constraintBottom_toTopOf="@id/tv_name"
+            app:layout_constraintBottom_toTopOf="@id/tvName"
             app:layout_constraintVertical_chainStyle="packed"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -93,15 +93,15 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/cl_lowerBlock"
+        android:id="@+id/clLowerBlock"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         android:background="@color/lower_block"
-        app:layout_constraintTop_toBottomOf="@id/cl_upperBlock">
+        app:layout_constraintTop_toBottomOf="@id/clUpperBlock">
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btn_contactsButton"
+                android:id="@+id/btnContactsButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/button_margin"
@@ -118,12 +118,12 @@
                 />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btn_editButton"
+                android:id="@+id/btnEditButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/button_margin"
                 android:background="@drawable/medium_rounded_corner"
-                app:layout_constraintBottom_toTopOf="@id/btn_contactsButton"
+                app:layout_constraintBottom_toTopOf="@id/btnContactsButton"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:text="@string/edit_profile"
@@ -136,11 +136,11 @@
                 />
 
             <TextView
-                android:id="@+id/tv_fillProfile"
+                android:id="@+id/tvFillProfile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/button_margin"
-                app:layout_constraintBottom_toTopOf="@id/btn_editButton"
+                app:layout_constraintBottom_toTopOf="@id/btnEditButton"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:text="@string/fill_out_profile"
@@ -150,39 +150,39 @@
                 />
 
             <ImageButton
-                android:id="@+id/ib_fbLogo"
+                android:id="@+id/ibFbLogo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintHorizontal_chainStyle="packed"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toStartOf="@id/ib_linkednLogo"
+                app:layout_constraintEnd_toStartOf="@id/ibLinkednLogo"
                 android:background="@drawable/ic_fb_logo"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toTopOf="@id/btn_contactsButton"
+                app:layout_constraintBottom_toTopOf="@id/btnContactsButton"
                 app:layout_constraintVertical_bias="0.2"/>
 
             <ImageButton
-                android:id="@+id/ib_linkednLogo"
+                android:id="@+id/ibLinkednLogo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintStart_toEndOf="@id/ib_fbLogo"
-                app:layout_constraintEnd_toStartOf="@id/ib_instLogo"
+                app:layout_constraintStart_toEndOf="@id/ibFbLogo"
+                app:layout_constraintEnd_toStartOf="@id/ibInstLogo"
                 android:background="@drawable/ic_linkedn_logo"
                 android:layout_marginStart="32dp"
                 android:layout_marginEnd="32dp"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toTopOf="@id/btn_contactsButton"
+                app:layout_constraintBottom_toTopOf="@id/btnContactsButton"
                 app:layout_constraintVertical_bias="0.2"/>
 
             <ImageButton
-                android:id="@+id/ib_instLogo"
+                android:id="@+id/ibInstLogo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintStart_toEndOf="@id/ib_linkednLogo"
+                app:layout_constraintStart_toEndOf="@id/ibLinkednLogo"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:background="@drawable/ic_inst_logo"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toTopOf="@id/btn_contactsButton"
+                app:layout_constraintBottom_toTopOf="@id/btnContactsButton"
                 app:layout_constraintVertical_bias="0.2"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
