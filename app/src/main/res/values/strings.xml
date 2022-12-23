@@ -13,11 +13,12 @@
     <string name="e_mail">E-mail</string>
     <string name="password">Password</string>
     <string name="remember_me">Remember me</string>
-    <string name="google">google</string>
+    <string name="google">GOOGLE</string>
     <string name="or">or</string>
     <string name="register">REGISTER</string>
-    <string name="agree">By clicking Register you agree to our Terms</string>
-    <string name="agree_cont">and Conditions</string>
+    <string name="agree">By clicking Register you agree to our Terms\nand Conditions</string>
     <string name="already_have_an_account">Already have an account?</string>
     <string name="sign_in">Sign in</string>
+    <string name="invalid_password">Minimum eight characters, at least one uppercase letter, one lowercase letter and one number</string>
+    <string name="invalid_email">Invalid e-mail</string>
 </resources>

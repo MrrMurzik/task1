@@ -10,7 +10,8 @@
     <color name="edit_button_color">#B2B2B3</color>
     <color name="default_color">#242235</color>
     <color name="buttonsColor">#FFBB86FC</color>
-    <color name="grey">#B2B2B3</color>
+    <color name="gray">#B2B2B3</color>
+    <color name="dark_gray">#B2B2B3</color>
     <color name="lower_block">#121212</color>
     <color name="black">#000000</color>
 </resources>

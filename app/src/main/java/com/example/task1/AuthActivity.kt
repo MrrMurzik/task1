@@ -1,5 +1,6 @@
 package com.example.task1
 
+import android.app.ActivityOptions
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
@@ -19,16 +20,18 @@ class AuthActivity : AppCompatActivity() {
         if (preferences.getString(USER_PREFERENCES, "") != "") {
             goNextActivity(preferences.getString(USER_PREFERENCES, "")!!)
         }
+        destroyPreference()
         super.onCreate(savedInstanceState)
         binding = SignUpBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
         binding.cbRememberMe.setOnCheckedChangeListener { _, _ -> switchCheckBox() }
         binding.btnRegister.setOnClickListener {registerNewUser()}
     }
 
     private fun registerNewUser() {
-        val email = binding.emailInput.text.toString().lowercase()
-        val password = binding.passwordInput.text.toString()
+        val email = binding.etEmail.text.toString().lowercase()
+        val password = binding.etPassword.text.toString()
         if (getValidityEmail(email) && getValidityPassword(password)) {
             val name = getName(email)
             if (binding.cbRememberMe.isChecked) {
@@ -42,24 +45,28 @@ class AuthActivity : AppCompatActivity() {
 
     private fun showError(validityEmail: Boolean, validityPassword: Boolean) {
         if (!validityEmail) {
-            binding.emailInput.error = "Invalid e-mail"
+            binding.etEmail.error = getString(R.string.invalid_email)
         }
         if (!validityPassword) {
-            binding.passwordInput.error = "Minimum eight characters, at least one uppercase letter,\n" +
-                    "        one lowercase letter and one number"
+            binding.etPassword.error = getString(R.string.invalid_password)
         }
     }
 
     private fun goNextActivity(name: String) {
         val intent = Intent(this, MainActivity::class.java)
         intent.putExtra("name", name)
-        startActivity(intent)
+        ActivityOptions.makeSceneTransitionAnimation(this).toBundle()
+        startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
     }
 
     private fun createPreference(name: String) {
         preferences.edit()
             .putString(USER_PREFERENCES, name)
             .apply()
+    }
+
+    private fun destroyPreference() {
+        preferences.edit().clear().apply()
     }
 
     private fun getName(email: String): String {

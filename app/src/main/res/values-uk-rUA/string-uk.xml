@@ -17,8 +17,9 @@
     <string name="google">google</string>
     <string name="or">або</string>
     <string name="register">Реєстрація</string>
-    <string name="agree">При реєстрації ви погоджуєтесь з нашими умовами</string>
-    <string name="agree_cont">і положеннями</string>
+    <string name="agree">При реєстрації ви погоджуєтесь з нашими умовами\nі положеннями</string>
     <string name="already_have_an_account">Вже маєте акаунт?</string>
     <string name="sign_in">Увійти</string>
+    <string name="invalid_password">Мінімум 8 символів, хоча б одна велика літера, одна маленька літера і одна цифра</string>
+    <string name="invalid_email">Неправильна електронна адреса</string>
 </resources>
