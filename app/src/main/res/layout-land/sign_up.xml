@@ -174,7 +174,7 @@
         android:textColor="@color/white"
         android:fontFamily="@font/montserrat_regular"
         android:gravity="center"
-        android:textSize="12sp"
+        android:textSize="@dimen/smallestFontSize"
         app:layout_constraintBottom_toTopOf="@id/tvAlreadyHaveAcc"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">

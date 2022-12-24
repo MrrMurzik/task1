@@ -4,6 +4,7 @@
     <dimen name="mediumPlusFontSize">18sp</dimen>
     <dimen name="mediumFontSize">16sp</dimen>
     <dimen name="smallFontSize">14sp</dimen>
+    <dimen name="smallestFontSize">12sp</dimen>
 
     <dimen name="icon_size">113dp</dimen>
 

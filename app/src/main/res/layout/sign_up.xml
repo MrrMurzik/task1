@@ -167,7 +167,7 @@
         android:text="@string/agree"
         android:textColor="@color/text_color"
         android:fontFamily="@font/montserrat_regular"
-        android:textSize="12sp"
+        android:textSize="@dimen/smallestFontSize"
         app:layout_constraintBottom_toTopOf="@id/tvAlreadyHaveAcc"
         app:layout_constraintVertical_chainStyle="packed"
         android:gravity="center"
