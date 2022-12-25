@@ -12,7 +12,7 @@ const val USER_PREFERENCES = "USER_PREFERENCES"
 
 class AuthActivity : AppCompatActivity() {
 
-    private lateinit var binding: SignUpBinding
+    private lateinit var bind: SignUpBinding
     private lateinit var preferences: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,19 +22,19 @@ class AuthActivity : AppCompatActivity() {
         }
         destroyPreference()
         super.onCreate(savedInstanceState)
-        binding = SignUpBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-
-        binding.cbRememberMe.setOnCheckedChangeListener { _, _ -> switchCheckBox() }
-        binding.btnRegister.setOnClickListener {registerNewUser()}
+        bind = SignUpBinding.inflate(layoutInflater)
+        setContentView(bind.root)
+//        bind.cbRememberMe.seton { _, _ -> switchCheckBox() }
+//        bind.cbRememberMe
+        bind.btnRegister.setOnClickListener {registerNewUser()}
     }
 
     private fun registerNewUser() {
-        val email = binding.etEmail.text.toString().lowercase()
-        val password = binding.etPassword.text.toString()
+        val email = bind.etEmail.text.toString().lowercase()
+        val password = bind.etPassword.text.toString()
         if (getValidityEmail(email) && getValidityPassword(password)) {
             val name = getName(email)
-            if (binding.cbRememberMe.isChecked) {
+            if (bind.cbRememberMe.isChecked) {
                 createPreference(name)
             }
             goNextActivity(name)
@@ -45,10 +45,10 @@ class AuthActivity : AppCompatActivity() {
 
     private fun showError(validityEmail: Boolean, validityPassword: Boolean) {
         if (!validityEmail) {
-            binding.etEmail.error = getString(R.string.invalid_email)
+            bind.etEmail.error = getString(R.string.invalid_email)
         }
         if (!validityPassword) {
-            binding.etPassword.error = getString(R.string.invalid_password)
+            bind.etPassword.error = getString(R.string.invalid_password)
         }
     }
 
@@ -95,10 +95,10 @@ class AuthActivity : AppCompatActivity() {
     }
 
     private fun switchCheckBox() {
-        if (binding.cbRememberMe.isChecked) {
-            binding.cbRememberMe.setButtonDrawable(R.drawable.ic_radio_button)
+        if (bind.cbRememberMe.isChecked) {
+            bind.cbRememberMe.setButtonDrawable(R.drawable.ic_radio_button)
         } else {
-            binding.cbRememberMe.setButtonDrawable(R.drawable.ic_radio_button_empty)
+            bind.cbRememberMe.setButtonDrawable(R.drawable.ic_radio_button_empty)
         }
     }
 }

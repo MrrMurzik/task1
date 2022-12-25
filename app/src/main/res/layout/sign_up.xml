@@ -92,7 +92,7 @@
         android:inputType="textPassword">
     </androidx.appcompat.widget.AppCompatEditText>
 
-    <CheckBox
+    <androidx.appcompat.widget.AppCompatCheckBox
         android:id="@+id/cbRememberMe"
         android:layout_width="wrap_content"
         android:layout_height="20dp"
